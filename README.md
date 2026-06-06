@@ -1,3 +1,8 @@
+![Windows Server](https://img.shields.io/badge/Windows_Server-2025-blue)
+![Active Directory](https://img.shields.io/badge/Active_Directory-Configured-success)
+![VirtualBox](https://img.shields.io/badge/Oracle_VirtualBox-Lab-orange)
+![Windows 11](https://img.shields.io/badge/Windows_11-Domain_Joined-success)
+
 # 🛡️ Wazuh + Sysmon Detection Lab
 
 A Security Operations Center (SOC) homelab built using:
