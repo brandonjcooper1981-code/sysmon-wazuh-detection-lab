@@ -1,7 +1,7 @@
-![Windows Server](https://img.shields.io/badge/Windows_Server-2025-blue)
-![Active Directory](https://img.shields.io/badge/Active_Directory-Configured-success)
-![VirtualBox](https://img.shields.io/badge/Oracle_VirtualBox-Lab-orange)
-![Windows 11](https://img.shields.io/badge/Windows_11-Domain_Joined-success)
+![Wazuh](https://img.shields.io/badge/Wazuh-SIEM-blue)
+![Sysmon](https://img.shields.io/badge/Sysmon-v15-green)
+![Windows_Server](https://img.shields.io/badge/Windows_Server-2025-blue)
+![Windows_11](https://img.shields.io/badge/Windows_11-Endpoint-lightblue)
 
 # 🛡️ Wazuh + Sysmon Detection Lab
 
@@ -169,6 +169,41 @@ Performed basic threat hunting using Sysmon telemetry.
 
 ---
 
+# Sysmon Event Analysis
+
+The following Sysmon events were observed after deployment.
+
+| Event ID | Description |
+|-----------|------------|
+| 1 | Process Creation |
+| 3 | Network Connection |
+| 7 | Image Loaded |
+| 11 | File Creation |
+| 13 | Registry Value Set |
+| 22 | DNS Query |
+
+Examples observed during testing:
+
+- Event ID 1 (Process Creation)
+- Event ID 13 (Registry Modification)
+- Event ID 22 (DNS Query)
+
+These events were successfully ingested into Wazuh and correlated with Sysmon detection rules.
+
+---
+
+# MITRE ATT&CK Mapping
+
+| Technique | Description |
+|------------|------------|
+| T1059 | Command and Scripting Interpreter |
+| T1112 | Modify Registry |
+| T1071 | Application Layer Protocol |
+| T1046 | Network Service Discovery |
+| T1082 | System Information Discovery |
+
+---
+
 # Troubleshooting
 
 ## Issue #1
@@ -254,6 +289,20 @@ Confirmed Sysmon event channel collection was enabled and restarted Wazuh servic
 
 ---
 
+# Security Outcomes
+
+This lab demonstrates the ability to:
+
+- Collect endpoint telemetry
+- Centralize security logs
+- Detect suspicious activity
+- Validate telemetry ingestion
+- Troubleshoot security tooling
+- Perform basic threat hunting
+- Investigate endpoint events
+
+---
+
 # Skills Demonstrated
 
 - SIEM Deployment
@@ -266,6 +315,16 @@ Confirmed Sysmon event channel collection was enabled and restarted Wazuh servic
 - Endpoint Monitoring
 - Security Troubleshooting
 - Incident Investigation
+
+---
+
+# Resume Highlights
+
+- Built a Windows Active Directory lab consisting of Windows Server 2025, Windows 11 endpoint, Sysmon, and Wazuh SIEM.
+- Configured Sysmon endpoint telemetry and integrated event collection into Wazuh.
+- Validated process creation, registry modification, and DNS query events through centralized monitoring.
+- Performed threat hunting using Sysmon telemetry and Wazuh dashboards.
+- Troubleshot XML configuration errors, agent communication issues, and event ingestion failures.
 
 ---
 
@@ -282,8 +341,20 @@ Confirmed Sysmon event channel collection was enabled and restarted Wazuh servic
 
 ---
 
-# Author
+## Author
 
-**Brandon Cooper**
+Brandon Cooper
 
-Cybersecurity | SOC Analyst | Threat Detection | Digital Forensics
+Cybersecurity Professional focused on:
+
+- SOC Operations
+- Threat Detection
+- Incident Response
+- Digital Forensics
+- Windows Security Monitoring
+
+GitHub:
+https://github.com/brandonjcooper1981-code
+
+LinkedIn:
+https://www.linkedin.com/in/brandon-cooper-070526375
