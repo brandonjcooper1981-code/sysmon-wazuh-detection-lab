@@ -44,6 +44,10 @@ This project demonstrates endpoint monitoring, log collection, Sysmon telemetry 
 +-----------------------+
 ```
 
+# Dashboard Overview
+
+![Threat Hunting Dashboard](screenshots/09-threat-hunting-system-dashboard.png)
+
 ---
 
 # Objectives
@@ -201,6 +205,23 @@ These events were successfully ingested into Wazuh and correlated with Sysmon de
 | T1071 | Application Layer Protocol |
 | T1046 | Network Service Discovery |
 | T1082 | System Information Discovery |
+
+---
+
+# Lab Results
+
+The deployment successfully achieved the following:
+
+- Sysmon v15 installed on CLIENT01
+- Sysmon Operational event channel enabled
+- Wazuh agent configured to collect Sysmon telemetry
+- Process creation events detected
+- Registry modification events detected
+- DNS query events detected
+- Sysmon alerts visible within Wazuh dashboard
+- Threat hunting queries validated
+
+Total Sysmon detections observed: 39
 
 ---
 
